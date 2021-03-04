@@ -1,28 +1,20 @@
-plugins {
-    id 'com.android.application'
-}
+apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 28
-    buildToolsVersion "28.0.3"
-
     defaultConfig {
-        applicationId "com.example.namettest"
-        minSdkVersion 22
-        targetSdkVersion 30
-        versionCode 4
-        versionName "2.2.2"
+        applicationId "com.example.myapplication"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
     }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
     }
     aaptOptions {
         additionalParameters '--auto-add-overlay'
@@ -39,4 +31,6 @@ dependencies {
     implementation "com.facebook.fresco:animated-gif:1.13.0"
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     implementation 'com.alibaba:fastjson:1.1.46.android'
+
 }
+

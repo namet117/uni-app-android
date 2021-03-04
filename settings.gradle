@@ -1,2 +1,1 @@
-include ':app'
-rootProject.name = "nameT-TEST"
+include ':simpleDemo'
